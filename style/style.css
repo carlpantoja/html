@@ -1,0 +1,154 @@
+:root {
+    --first-color: #fff;
+    --second-color: #efefef;
+    --third-color: #d9d9d9;
+    --font-color: #111111;
+}
+
+.dark {
+    --first-color: #111111;
+    --second-color: #2a291f;
+    --third-color: #1e262b;
+    --font-color: #fff;
+}
+
+.light {
+    --first-color: #fff;
+    --second-color: #efefef;
+    --third-color: #d9d9d9;
+    --font-color: #111111;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: var(--first-color);
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    margin: .5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tema {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    background: var(--second-color);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+details {
+    padding: .5rem;
+    margin: 1rem;
+}
+
+summary {
+    margin: .5rem;
+}
+
+.detalhes {
+    display: flex;
+    background: var(--third-color);
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+}
+
+form {
+    margin: .5rem;
+}
+
+.resposta {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+
+.erro, #idade {
+    margin-top: 1rem; 
+}
+
+input {
+    background: transparent;
+    color: var(--font-color);
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
+
+.dark input[type="date"] {
+    color-scheme: dark;
+    transition: all 0.3s ease-in-out;
+}
+
+#cep, #birthday {
+    border-bottom: 1px solid;
+}
+
+.toggle {
+    background: var(--first-color);
+    position: relative;
+    width: 20px;
+    height: 10px;
+    padding: 5px;
+    margin: .5rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.toggle::before {
+    background-color: #add8e6;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3 ease-in-out;
+}
+
+.active::before {
+    left: calc(100% - 15px);
+    background-color: #add8e6;
+}
+
+#load {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 6px solid #e5e5e5;
+    border-top-color: #51d4db;
+    border-radius: 50%;
+    animation: is-rotating 1s infinite;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
