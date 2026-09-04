@@ -66,10 +66,26 @@ summary {
 
 .detalhes {
     display: flex;
+    flex-direction: column;
     background: var(--third-color);
     padding: 1rem;
     border-radius: 10px;
     align-items: center;
+}
+
+dialog {
+    position: fixed;
+    inset: 0;
+    background: var(--third-color);
+    color: var(--font-color);
+    padding: 10px;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+}
+
+dialog .close {
+    margin: 10px;
 }
 
 form {
@@ -82,11 +98,7 @@ form {
     margin: .5rem;
 }
 
-.erro, #idade {
-    margin-top: 1rem; 
-}
-
-input {
+input, button {
     background: transparent;
     color: var(--font-color);
     border: none;
@@ -96,7 +108,7 @@ input:focus {
     outline: none;
 }
 
-input[type="button"] {
+input[type="button"], button {
     cursor: pointer;
 }
 

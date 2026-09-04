@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style/style.css">
         <title>Projetos</title>
     </head>
@@ -13,7 +14,7 @@
                 <details>
                     <summary>Projeto 1: Alterar Tema</summary>
                     <div class="detalhes">
-                        Alterne entre os temas claro e escuro:
+                        <p>Alterne entre os temas claro e escuro: </p>
                         <div class="toggle"></div>
                     </div>
                 </details>
@@ -21,21 +22,83 @@
                 <details>
                     <summary>Projeto 2: Consulta de endereços</summary>
                     <div class="detalhes">
-                        Conheça informações de um cep através da Api Viacep.
-                        <a href="pages/cep.html">Acesse</a>
+                        <p>Conheça informações de um cep através da Api Viacep.</p>
+                        <button class="openCep" onclick="showDialog(dialogCep, this)">Veja</button>
+
+                        <dialog id="dialogCep">
+                            <button class="close" onclick="showDialog(dialogCep, this)"><i class="fa fa-close"></i></button>
+
+                            <form>
+                                <label for="cep">
+                                    CEP
+                                    <input type="text" id="cep" oninput="cepFormat(this)">
+                                </label>
+
+                                <input type="button" onclick="apiCep()" value="Consultar">
+                            </form>
+
+                            <div id="load"></div>
+
+                            <div class="resposta">
+                                <label for="logradouro">
+                                    Endereço:
+                                    <input type="text" id="logradouro" readonly>
+                                </label>
+
+                                <br/>
+
+                                <label for="complemento">
+                                    Complemento:
+                                    <input type="text" id="complemento" readonly>
+                                </label>
+
+                                <br/>
+
+                                <label for="bairro">
+                                    Bairro: 
+                                    <input type="text" id="bairro" readonly>
+                                </label>
+
+                                <br/>
+
+                                <label for="localidade">
+                                    Cidade:
+                                    <input type="text" id="localidade" readonly>
+                                </label>
+
+                                <br/>
+
+                                <label for="estado">
+                                    Estado:
+                                    <input type="text" id="estado">
+                                </label>
+                            </div>
+
+                            <div class="erro"></div>
+                        </dialog>
                     </div>
                 </details>
 
                 <details>
                     <summary>Projeto 3: Calcular idade</summary>
                     <div class="detalhes">
-                        Calcule a idade a partir de uma data de nascimento.
-                        <a href="pages/idade.html">Acesse</a>
+                        <label for="birthday">Calcule sua idade:
+                            <input type="date" id="birthday" onchange="calcularIdade(value)" />
+                        </label>
+
+                        <div id="idade"></div>
+
+                        <div class="erroIdade"></div>
                     </div>
                 </details>
             </div>
         </div>
 
         <script src="script/dark-mode.js"></script>
+        <script src="script/idade.js"></script>
+        <script src="script/format.js"></script>
+        <script src="script/connect.js"></script>
+        <script src="script/cep.js"></script>
+        <script src="script/dialog.js"></script>
     </body>
 </html>
