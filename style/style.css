@@ -88,8 +88,28 @@ dialog .close {
     margin: 10px;
 }
 
+#dialogImg {
+    width: 700px;
+}
+
 form {
     margin: .5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem;
+}
+
+#icons {
+    display: flex;
+}
+
+#icons i {
+    padding: .5rem;
+    cursor: pointer;
 }
 
 .resposta {
@@ -97,6 +117,35 @@ form {
     flex-direction: column;
     margin: .5rem;
 }
+
+#manipule {
+    display: flex;
+    flex-direction: column;
+}
+
+#img-content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#img-content img {
+    width: 70%;
+    padding: 1rem;
+    margin: 1rem;
+    anchor-name: --anchor-img;
+}
+
+#visibility {
+    background-size: cover;
+    background-position: center;
+    position-anchor: --anchor-img;
+    position: absolute;
+    width: anchor-size(width);
+    height: anchor-size(height);
+    top: 165px;
+}
+
 
 input, button {
     background: transparent;

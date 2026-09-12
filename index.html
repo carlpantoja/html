@@ -91,6 +91,35 @@
                         <div class="erroIdade"></div>
                     </div>
                 </details>
+
+                <details>
+                    <summary>Projeto 4: Imagem</summary>
+                    <div class="detalhes">
+                        <p>Escolha uma imagem.</p>
+                        <button class="openImg" onclick="showDialog(dialogImg, this)">Veja</button>
+
+                        <dialog id="dialogImg">
+                            <button class="close" onclick="showDialog(dialogImg, this)"><i class="fa fa-close"></i></button>
+
+                            <div id="manipule">
+                                <input type="file" accept="image/jpeg, image/png" id="file-img">
+
+                                <div id="icons">
+                                    <i class="fa fa-eye-slash"></i>
+                                    <i class="fa fa-eye"></i>
+                                    <i class="fa fa-search-plus"></i>
+                                    <i class="fa fa-search-minus"></i>
+                                    <i class="fa fa-undo"></i>
+                                </div>
+
+                                <section>
+                                    <div id="img-content"><img src="" id="image-chosen"></div>
+                                    <div id="visibility"></div>
+                                </section>
+                            </div>
+                        </dialog>
+                    </div>
+                </details>
             </div>
         </div>
 
@@ -100,5 +129,6 @@
         <script src="script/connect.js"></script>
         <script src="script/cep.js"></script>
         <script src="script/dialog.js"></script>
+        <script src="script/image.js"></script>
     </body>
 </html>
