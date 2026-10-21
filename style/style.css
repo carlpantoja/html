@@ -170,6 +170,47 @@ input[type="button"], button {
     border-bottom: 1px solid;
 }
 
+#kanban {
+    display: flex;
+    padding: 1em;
+}
+
+#do {
+    background-color: var(--second-color);
+    width: 250px;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--font-color);
+    border-radius: 15px;
+}
+
+#doing {
+    background-color: var(--second-color);
+    width: 250px;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--font-color);
+    border-radius: 15px;
+}
+
+#did {
+    background-color: var(--second-color);
+    width: 250px;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--font-color);
+    border-radius: 15px;
+}
+
+.list {
+    background-color: var(--first-color);
+    padding: .5em;
+    margin: .5em;
+    border: 1px solid var(--font-color);
+    border-radius: 15px;
+    cursor: grab;
+}
+
 .toggle {
     background: var(--first-color);
     position: relative;

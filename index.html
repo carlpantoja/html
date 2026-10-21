@@ -120,6 +120,35 @@
                         </dialog>
                     </div>
                 </details>
+
+                <details>
+                    <summary>Projeto 5: Kanban board</summary>
+                    <div class="detalhes">
+                        <p>Arraste e solte elementos dos quadros.</p>
+                        <button class="openKanban" onclick="showDialog(dialogKanban, this)">Veja</button>
+
+                        <dialog id="dialogKanban">
+                            <button class="close" onclick="showDialog(dialogKanban, this)"><i class="fa fa-close"></i></button>
+
+                            <div id="kanban">
+                                <div id="do">
+                                    <h3>DO</h3>
+                                    <div class="list" draggable="true">Criar os quadros</div>
+                                    <div class="list" draggable="true">Criar os elementos</div>
+                                    <div class="list" draggable="true">Estilizar os quadros</div>
+                                    <div class="list" draggable="true">Estilizar os elementos</div>
+                                    <div class="list" draggable="true">Mover os elementos</div>
+                                </div>
+                                <div id="doing">
+                                    <h3>DOING</h3>
+                                </div>
+                                <div id="did">
+                                    <h3>DID</h3>
+                                </div>
+                            </div>
+                        </dialog>
+                    </div>
+                </details>
             </div>
         </div>
 
@@ -130,5 +159,6 @@
         <script src="script/cep.js"></script>
         <script src="script/dialog.js"></script>
         <script src="script/image.js"></script>
+        <script src="script/drag-drop.js"></script>
     </body>
 </html>
